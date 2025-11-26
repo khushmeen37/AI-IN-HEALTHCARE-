@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>AI Around the World</title>
+<style>
+body { background: linear-gradient(to bottom, #e3f2fd, #fff); font-family: "Trebuchet MS", sans-serif; margin: 0; }
+header { background-color: #1565c0; text-align: center; font-size: 32px; padding: 15px; color: white; letter-spacing: 1px; }
+#info { text-align: center; padding: 20px; }
+#info h2 { color: #0d47a1; }
+#info p { max-width: 800px; margin: 0 auto; line-height: 1.6; }
+#imageSwitch { margin-top: 20px; text-align: center; }
+#imageSwitch img { border-radius: 10px; border: 3px solid #1565c0; }
+#caption { font-weight: bold; margin-bottom: 10px; }
+button { padding: 10px 18px; background-color: #ff9800; border: none; cursor: pointer; border-radius: 8px; font-size: 14px; }
+button:hover { opacity: 0.9; }
+.video-section { text-align: center; margin-top: 30px; }
+nav { text-align: center; margin: 25px 0 30px 0; }
+</style>
+</head>
+<body>
+<header><strong>Global Trends in Artificial Intelligence</strong></header>
+
+<div id="info">
+<h2>What is Artificial Intelligence?</h2>
+<p>
+Artificial Intelligence (AI) is the ability of computers and machines to perform tasks that normally need human intelligence. For example, AI can recognize faces, translate languages, drive cars, and analyze large amounts of data to help people make decisions.
+</p>
+</div>
+
+<div id="imageSwitch">
+<p id="caption">AI in Self-Driving Cars</p>
+<img id="aiImg" src="https://images.pexels.com/photos/1402787/pexels-photo-1402787.jpeg" width="320">
+<br><br>
+<button onclick="nextImage()">Next AI Example</button>
+</div>
+
+<script>
+const captions = [
+"AI in Self-Driving Cars",
+"AI in Healthcare Diagnostics",
+"AI in Smart Classrooms",
+"Facial Recognition Systems",
+"Robots Helping in Industries"
+];
+const images = [
+"https://images.pexels.com/photos/1402787/pexels-photo-1402787.jpeg",
+"https://images.pexels.com/photos/6129052/pexels-photo-6129052.jpeg",
+"https://images.pexels.com/photos/5905495/pexels-photo-5905495.jpeg",
+"https://images.pexels.com/photos/7947750/pexels-photo-7947750.jpeg",
+"https://images.pexels.com/photos/6205762/pexels-photo-6205762.jpeg"
+];
+let index = 0;
+function nextImage() {
+index = (index + 1) % images.length;
+document.getElementById("aiImg").src = images[index];
+document.getElementById("caption").innerText = captions[index];
+}
+</script>
+
+<div class="video-section">
+<h3>Watch: A Simple Intro to AI</h3>
+<iframe width="420" height="315" src="https://www.youtube.com/embed/2ePf9rue1Ao" frameborder="0" allowfullscreen></iframe>
+</div>
+
+<nav>
+<a href="page2.html"><button>Go to AI in India</button></a>
+</nav>
+</body>
+</html>
