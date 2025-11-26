@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Impact of AI in India</title>
+<style>
+body { background-color: #e8f5e9; font-family: "Verdana", sans-serif; margin: 0; }
+header { background-color: #2e7d32; text-align: center; font-size: 30px; padding: 12px; color: white; }
+h2 { text-align: center; color: #1b5e20; }
+.content { width: 320px; margin: 20px auto; padding: 18px; border-radius: 10px; background-color: #ffffff; border: 2px solid #2e7d32; box-shadow: 0 0 6px rgba(0,0,0,0.2); }
+.content ul { padding-left: 18px; line-height: 1.6; }
+img { float: right; border: 2px solid #2e7d32; margin-right: 10%; border-radius: 8px; }
+nav { text-align: center; margin: 25px 0; clear: both; }
+button { padding: 10px 18px; background-color: #43a047; border: none; cursor: pointer; border-radius: 8px; color: white; font-size: 14px; }
+button:hover { opacity: 0.9; }
+</style>
+</head>
+<body>
+<header>Sectoral Impact of AI in India</header>
+
+<h2>How AI Changes Different Sectors</h2>
+<div class="content">
+<ul>
+<li><strong>AI in Medicine:</strong> helps with early diagnosis and supports robotic surgery.</li>
+<li><strong>AI in Education:</strong> creates smart learning apps that adjust to each student.</li>
+<li><strong>AI in Agriculture:</strong> helps farmers with crop monitoring and yield prediction.</li>
+</ul>
+</div>
+
+<img id="rotateImg" src="https://images.pexels.com/photos/6129044/pexels-photo-6129044.jpeg" height="200">
+<script>
+const imgs = [
+"https://images.pexels.com/photos/6129044/pexels-photo-6129044.jpeg",
+"https://images.pexels.com/photos/4144096/pexels-photo-4144096.jpeg",
+"https://images.pexels.com/photos/943096/pexels-photo-943096.jpeg"
+];
+let idx = 0;
+function rotate() {
+document.getElementById("rotateImg").src = imgs[idx];
+idx = (idx + 1) % imgs.length;
+setTimeout(rotate, 2500);
+}
+rotate();
+</script>
+
+<nav>
+<a href="page4.html"><button>Future of AI in India</button></a>
+</nav>
+</body>
+</html>
